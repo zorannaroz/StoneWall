@@ -1,0 +1,701 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  width: 100%;
+  height: 70%;
+  background-image: url(../images/tyres.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: rgb(5, 4, 4);
+}
+
+.logonav {
+  display: flex;
+  justify-content: space-between;
+  height: 40%;
+
+  div {
+    width: 50%;
+  }
+  .logo {
+    display: flex;
+    align-items: start;
+    object-fit: cover;
+    background: linear-gradient(to right, #000000, #d3d0d0);
+    div {
+      height: 100%;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .nav {
+    background: linear-gradient(to left, #000000, #d3d0d0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    nav {
+      width: 100%;
+    }
+
+    ul {
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+      a {
+        text-decoration: none;
+        color: #23dbf5;
+        text-shadow: 3px 4px 2px black;
+      }
+    }
+  }
+}
+
+.h1 {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  animation: liftup 5s infinite;
+
+  span {
+    text-shadow: 2px 2px 32px rgba(174, 252, 239, 0.3);
+    animation: colorchange 1s infinite alternate;
+  }
+  span:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  span:nth-child(2) {
+    animation-delay: 0.25s;
+  }
+
+  span:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+
+  span:nth-child(4) {
+    animation-delay: 0.75s;
+  }
+
+  span:nth-child(5) {
+    animation-delay: 1s;
+  }
+
+  span:nth-child(6) {
+    animation-delay: 1.25s;
+  }
+
+  span:nth-child(7) {
+    animation-delay: 1.5s;
+  }
+
+  span:nth-child(8) {
+    animation-delay: 1.75s;
+  }
+}
+
+@keyframes liftup {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes colorchange {
+  0% {
+    color: rgba(53, 220, 253, 0.5);
+  }
+  100% {
+    color: rgba(63, 30, 30, 0.068);
+  }
+}
+
+main {
+  background-color: rgba(75, 12, 12, 0.2);
+  border-top: 1em solid;
+
+  .wheel {
+    position: relative;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    object-fit: cover;
+    img {
+      width: 13%;
+      border: 1px solid;
+      border-radius: 50%;
+      position: absolute;
+      left: 65%;
+      animation: spin 2s linear forwards, moveleft 3s ease-in-out forwards;
+    }
+    h2 {
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px;
+      opacity: 0;
+      transition: opacity 1s ease-in-out 2.5s;
+      animation: fadeIn 1s ease-in-out 3s forwards;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    left: 65%;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  80% {
+    left: 0;
+    bottom: 40%;
+  }
+
+  100% {
+    left: 65%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.tyres {
+  margin: 2em 6em;
+  padding: 4em 0em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "summer winter"
+    "sport rims";
+  gap: 4em;
+  
+  background-color: #23dbf5;
+  border: 0.6em solid #23dbf5;
+  border-radius: 1em;
+  box-shadow: inset 32px 32px 12px, inset -32px -32px 12px;
+  
+   
+  
+
+  div {
+    height: 40%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    object-fit: cover;
+
+    h3 {
+      font-size: 2em;
+      text-shadow: 2px 2px 2px;
+    }
+    img {
+      width: 100%;
+    }
+    label {
+      font-size: 1.3em;
+    }
+    input {
+      padding: 0.6em 0;
+    }
+    input:hover {
+      box-shadow: 0px 12px 12px, -0px -12px 12px;
+    }
+    input:focus {
+      box-shadow: inset 4px 4px 6px, inset -4px 4px 6px;
+    }
+    button {
+      padding: 0.5em 2em;
+      border-radius: 1em;
+      background-color: #c4c3ca;
+      font-size: 1.2em;
+    }
+    button:hover {
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      box-shadow: 4px 4px 12px black, -4px -4px 12px black;
+    }
+    button:active {
+      box-shadow: inset 4px 4px 6px, inset -4px 4px 6px black;
+    }
+    h3,
+    img,
+    input,
+    label,
+    button {
+      margin: 1em 0;
+    }
+  }
+  .summer {
+    grid-area: summer;
+  }
+  .winter {
+    grid-area: winter;
+  }
+  .sport {
+    grid-area: sport;
+  }
+  .rims {
+    grid-area: rims;
+  }
+  img {
+    transition: transform 2s ease-in-out;
+  }
+}
+.tyres:hover {
+  box-shadow: inset 52px 52px 18px, inset -52px -52px 18px;
+  background: linear-gradient(to bottom, #23dbf5, rgba(75, 12, 12, 0.2));
+}
+.tyres img:hover {
+  animation: spinwheel 0.5s linear forwards;
+}
+@keyframes spinwheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.aboutus {
+  margin: 1em 6em 4em 6em;
+
+  .h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7em;
+    text-shadow: 2px 2px 4px;
+    div {
+      width: 45%;
+    }
+    div:hover {
+      border-radius: 1em 8em 0em 4em;
+      box-shadow: 22px 22px 22px;
+      padding: 0 0.27em 1em 0;
+      background-color: brown;
+    }
+    img {
+      width: 100%;
+    }
+    img:hover {
+      border-radius: 1em 8em 0em 4em;
+    }
+  }
+}
+.aboutus2 {
+  display: flex;
+  justify-content: space-evenly;
+
+  div {
+    width: 18%;
+    border: 2px solid black;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      font-size: 1.3em;
+    }
+    p {
+      padding: 0 1em;
+    }
+    .cam {
+      height: 1em;
+      margin-top: 1em;
+      background-color: red;
+    }
+    img {
+      width: 100%;
+    }
+    button {
+      border-radius: 1em;
+      margin: 1em 0 2em 0;
+      padding: 0.8em 1.2em;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+  div:hover {
+    box-shadow: 4px 6px 12px;
+  }
+  button:hover {
+    box-shadow: inset 4px 6px 12px;
+    background-color: red;
+    a {
+      color: white;
+    }
+  }
+}
+footer {
+  height: 45vh;
+  background-color: black;
+  color: white;
+  margin-top: 1.2em;
+  h3 {
+    text-shadow: 2px 2px 2px;
+    font-size: 2.2em;
+  }
+}
+.media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icons {
+  display: flex;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      font-size: 2.5em;
+      color: red;
+    }
+    a:hover {
+      color: gold;
+      font-size: 4em;
+      text-shadow: 6px 6px 14px red;
+    }
+  }
+  div:nth-child(2) {
+    margin: 0 4em;
+  }
+}
+.copy {
+  display: flex;
+  align-items: end;
+  height: 13vh;
+  font-size: 1.4em;
+  p {
+    margin: 0 0 0 0.5em;
+  }
+}
+
+/* MEDIA SCREEN */
+
+@media screen and (max-width: 300px) {
+  body {
+    header *,
+    main {
+      overflow: hidden;
+    }
+  }
+  body header {
+    height: 12%;
+
+    .nav {
+      font-size: 0.5em;
+    }
+
+    .h1 {
+      overflow: hidden;
+    }
+  }
+  .tyres {
+    overflow: hidden;
+    gap: 0;
+  }
+  .logonav .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .h1 {
+    h1 {
+      font-size: 0.35em;
+      top: 25%;
+    }
+  }
+  .wheel img {
+    top: 30%;
+  }
+  .tyres div {
+    h3 {
+      font-size: 1.5em;
+    }
+    button {
+      padding: 0.2em 0.5em;
+    }
+  }
+  .aboutus2 div button {
+    padding: 0.3em 0.5em;
+  }
+  main .contact {
+    h2 {
+      font-size: 1.2em;
+    }
+  }
+  form .consub {
+    input {
+      padding: 1em 0;
+      width: 80%;
+    }
+    button {
+      padding: 0;
+      width: 80%;
+    }
+  }
+}
+@media screen and (min-width: 301px) and (max-width: 400px) {
+  header {
+    .logonav {
+      font-size: 0.7em;
+    }
+  }
+  h1 {
+    font-size: 0.3em;
+    position: fixed;
+    top: 15%;
+  }
+}
+@media screen and (max-width: 500px) {
+  header {
+    height: 21%;
+    nav {
+      font-size: 0.7em;
+    }
+  }
+  .tyres {
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "summer"
+      "winter"
+      "sport"
+      "rims";
+
+    input {
+      width: 90%;
+    }
+  }
+  h1 {
+    font-size: 0.65em;
+    position: absolute;
+    top: 15%;
+  }
+  main .wheel h2 {
+    font-size: 1em;
+  }
+  .aboutus h2 {
+    font-size: 0.8em;
+  }
+  .aboutus2 {
+    display: grid;
+    margin: 0 2em;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "cam1"
+      "cam2"
+      "cam3"
+      "cam4"
+      "cam5";
+    .cam1,
+    .cam2,
+    .cam3,
+    .cam4,
+    .cam5 {
+      width: 100%;
+
+      margin-bottom: 1em;
+    }
+    .cam1 {
+      grid-area: cam1;
+    }
+    .cam2 {
+      grid-area: cam2;
+    }
+    .cam3 {
+      grid-area: cam3;
+    }
+    .cam4 {
+      grid-area: cam4;
+    }
+    .cam5 {
+      grid-area: cam5;
+    }
+  }
+  .icons {
+    flex-direction: column;
+    div {
+      margin: 0;
+    }
+  }
+  footer {
+    height: 110vh;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    font-size: 2em;
+    text-shadow: 2px 2px 2px;
+  }
+  label {
+    font-weight: 900;
+    margin-top: 1em;
+  }
+  input {
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 1em;
+  }
+  input:hover {
+    box-shadow: inset 4px 4px 3px;
+  }
+  button {
+    padding: 1em;
+    border: 1px solid red;
+    margin-top: 1em;
+    border-radius: 1em;
+    box-shadow: 4px 4px 3px;
+    font-size: 1em;
+    h5 {
+      margin: 0;
+      color: firebrick;
+      display: none;
+      font-size: 2em;
+    }
+  }
+  button:active {
+    box-shadow: inset 8px 8px 3px;
+    font-size: 2em;
+    h5 {
+      display: block;
+    }
+  }
+}
+
+.consub {
+  display: flex;
+  flex-direction: column;
+  .check {
+    margin-top: 1em;
+    display: flex;
+    align-items: end;
+
+    input {
+      width: 1.4em;
+      height: 1.4em;
+      margin: 0 0 0 1em;
+    }
+    input:hover {
+      height: 2em;
+      width: 2em;
+    }
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .nav {
+    font-size: 1em;
+  }
+  header {
+    background-size: 100%;
+    height: 35%;
+  }
+  h1 {
+    font-size: 1em;
+    position: absolute;
+    top: 12%;
+  }
+  main .wheel h2 {
+    font-size: 1.6em;
+  }
+  .aboutus h2 {
+    font-size: 1.2em;
+  }
+  .tyres {
+    margin: 0;
+  }
+  .aboutus2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "cam1 cam2 cam3"
+      "cam4 cam5 .";
+    .cam1,
+    .cam2,
+    .cam3,
+    .cam4,
+    .cam5 {
+      width: 90%;
+      margin-left: 0.45em;
+      margin-bottom: 1em;
+    }
+
+    .cam1 {
+      grid-area: cam1;
+    }
+    .cam2 {
+      grid-area: cam2;
+    }
+    .cam3 {
+      grid-area: cam3;
+    }
+    .cam4 {
+      grid-area: cam4;
+    }
+    .cam5 {
+      grid-area: cam5;
+    }
+  }
+  .icons div {
+    margin: 0 1em;
+  }
+}
+@media screen and (min-width: 801px) {
+  .nav {
+    font-size: 1.6em;
+  }
+}
