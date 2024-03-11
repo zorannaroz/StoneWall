@@ -554,7 +554,7 @@ footer h3 {
   border-radius: 1em;
   box-shadow: 4px 4px 3px;
   font-size: 1em;
-  transition: transform 0.3s, box-shadow 0.3s, font-size 0.3s;
+  transition: transform 0.01s, box-shadow 0.01s, font-size 0.01s;
 }
 .contact button h5 {
   margin: 0;
