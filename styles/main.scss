@@ -206,14 +206,11 @@ main {
     "summer winter"
     "sport rims";
   gap: 4em;
-  
+
   background-color: #23dbf5;
   border: 0.6em solid #23dbf5;
   border-radius: 1em;
   box-shadow: inset 32px 32px 12px, inset -32px -32px 12px;
-  
-   
-  
 
   div {
     height: 40%;
@@ -297,10 +294,12 @@ main {
     transform: rotate(360deg);
   }
 }
-
 .aboutus {
-  margin: 1em 6em 4em 6em;
-
+  margin: 1em 6em 8em 6em;
+ 
+ 
+ 
+ 
   .h2 {
     display: flex;
     flex-direction: column;
@@ -308,15 +307,24 @@ main {
     justify-content: center;
     font-size: 1.7em;
     text-shadow: 2px 2px 4px;
+
     div {
-      width: 45%;
+      width: 35%;
+
+      transition: transform 0.3s, box-shadow 0.3s, border-radius 0.3s,
+        padding 0.3s, background-color 0.3s;
     }
     div:hover {
       border-radius: 1em 8em 0em 4em;
       box-shadow: 22px 22px 22px;
       padding: 0 0.27em 1em 0;
       background-color: brown;
+      transform: scale(1.1);
+     
+     
+     
     }
+
     img {
       width: 100%;
     }
@@ -325,6 +333,7 @@ main {
     }
   }
 }
+
 .aboutus2 {
   display: flex;
   justify-content: space-evenly;
@@ -397,11 +406,12 @@ footer {
     a {
       font-size: 2.5em;
       color: red;
+      transition: transform 0.3s, color 0.3s;
     }
     a:hover {
       color: gold;
-      font-size: 4em;
       text-shadow: 6px 6px 14px red;
+      transform: scale(1.6);
     }
   }
   div:nth-child(2) {
@@ -599,6 +609,7 @@ footer {
     border-radius: 1em;
     box-shadow: 4px 4px 3px;
     font-size: 1em;
+    transition: transform 0.3s, box-shadow 0.3s, font-size 0.3s;
     h5 {
       margin: 0;
       color: firebrick;
@@ -609,6 +620,7 @@ footer {
   button:active {
     box-shadow: inset 8px 8px 3px;
     font-size: 2em;
+    transform: scale(1.1);
     h5 {
       display: block;
     }
