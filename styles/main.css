@@ -276,7 +276,7 @@ main .wheel h2 {
   }
 }
 .aboutus {
-  margin: 1em 6em 4em 6em;
+  margin: 1em 6em 8em 6em;
 }
 .aboutus .h2 {
   display: flex;
@@ -287,13 +287,15 @@ main .wheel h2 {
   text-shadow: 2px 2px 4px;
 }
 .aboutus .h2 div {
-  width: 45%;
+  width: 35%;
+  transition: transform 0.3s, box-shadow 0.3s, border-radius 0.3s, padding 0.3s, background-color 0.3s;
 }
 .aboutus .h2 div:hover {
   border-radius: 1em 8em 0em 4em;
   box-shadow: 22px 22px 22px;
   padding: 0 0.27em 1em 0;
   background-color: brown;
+  transform: scale(1.1);
 }
 .aboutus .h2 img {
   width: 100%;
@@ -376,11 +378,12 @@ footer h3 {
 .icons div a {
   font-size: 2.5em;
   color: red;
+  transition: transform 0.3s, color 0.3s;
 }
 .icons div a:hover {
   color: gold;
-  font-size: 4em;
   text-shadow: 6px 6px 14px red;
+  transform: scale(1.6);
 }
 .icons div:nth-child(2) {
   margin: 0 4em;
@@ -551,6 +554,7 @@ footer h3 {
   border-radius: 1em;
   box-shadow: 4px 4px 3px;
   font-size: 1em;
+  transition: transform 0.3s, box-shadow 0.3s, font-size 0.3s;
 }
 .contact button h5 {
   margin: 0;
@@ -561,6 +565,7 @@ footer h3 {
 .contact button:active {
   box-shadow: inset 8px 8px 3px;
   font-size: 2em;
+  transform: scale(1.1);
 }
 .contact button:active h5 {
   display: block;
